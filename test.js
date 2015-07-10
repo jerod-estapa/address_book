@@ -23,3 +23,9 @@ MyContact.saveContacts(contacts, function(err)
 	{
 		console.log('success')
 	})
+	
+var contact = { name: "John Smith", number: "604-123-9090" }
+
+MyContact.saveContact(contact, function(err) {
+	console.log('success')
+})

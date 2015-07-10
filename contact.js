@@ -30,4 +30,14 @@ Contact.saveContacts = function(contacts, done) {
 	})
 }
 
+Contact.saveContact = function(contact, done) {
+	var _this = this
+	this.loadContacts(function(err, contacts) {
+		if (err) {return done(err) }
+		contacts.push(contact)
+		_this.saveContacts(contacts, done)
+	})
+
+}
+
 module.exports = Contact
