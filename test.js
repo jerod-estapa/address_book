@@ -12,3 +12,7 @@ var contact = MyContact.createContact('Jerod Estapa,555-555-5555')
 console.log(name)
 console.log(number)
 console.log(contact)
+
+MyContact.loadContacts(function(err, data) {
+	console.log(data)
+})

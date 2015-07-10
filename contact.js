@@ -16,4 +16,11 @@ Contact.createContact = function(str) {
 	return contact
 }
 
+Contact.loadContacts = function(done) {
+	var jsonfile = require('jsonfile')
+	jsonfile.readFile('data.json', function(err, data) {
+		done(err, data)
+	})
+}
+
 module.exports = Contact

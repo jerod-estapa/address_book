@@ -11,5 +11,8 @@
     "url": "address_book"
   },
   "author": "jerodestapa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^2.2.1"
+  }
 }
