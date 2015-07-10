@@ -23,4 +23,11 @@ Contact.loadContacts = function(done) {
 	})
 }
 
+Contact.saveContacts = function(contacts, done) {
+	var jsonfile = require('jsonfile')
+	jsonfile.writeFile('data.json', contacts, function(err, data) {
+		done(err, data)
+	})
+}
+
 module.exports = Contact
