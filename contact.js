@@ -41,12 +41,12 @@ Contact.saveContact = function(contact, done) {
 }
 
 Contact.findContacts = function(name, done) {
-	function checkContacts(name) {
-		return name
-	}
 	this.loadContacts(function(err, contacts) {
 		if (err) {return done(err)}
-		contacts.filter(checkContacts)
+		var result = contacts.filter(function(contact) {
+			return contact.name == name
+		})
+		done(null, result)
 	})
 }
 
