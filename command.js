@@ -8,4 +8,4 @@ Command.getOperationData = function() {
 	return process.argv[3]
 }
 
-modules.export = Command
+module.exports = Command

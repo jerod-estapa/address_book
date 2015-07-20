@@ -29,3 +29,8 @@ var contact = { name: "John Smith", number: "604-123-9090" }
 MyContact.saveContact(contact, function(err) {
 	console.log('success')
 })
+
+var MyCommand = require('./command')
+
+console.log(MyCommand.getOperation())
+console.log(MyCommand.getOperationData())
