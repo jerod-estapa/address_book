@@ -34,3 +34,7 @@ var MyCommand = require('./command')
 
 console.log(MyCommand.getOperation())
 console.log(MyCommand.getOperationData())
+
+MyCommand.add(function(err) {
+	console.log('Contact added!')
+})
